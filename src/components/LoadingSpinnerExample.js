@@ -4,12 +4,12 @@ import { compose, lifecycle, branch, renderComponent } from 'recompose';
 const fetchData = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => resolve(
-      { 
-        name: 'Davin', 
+      {
+        name: 'Davin',
         interests: 'Javascript, React and Recompose',
         gender: 'male',
         height: '183cm'
-        }), 2000);
+      }), 2000);
   });
 }
 
@@ -38,10 +38,10 @@ const enhance = compose(
   withSpinnerWhileLoading
 );
 
-const User = enhance(({ name, interests, gender, height}) =>
+const User = enhance(({ name, interests, gender, height }) =>
   <div className="User">
     <h3>{name}</h3>
-    <ul style={{listStyle: 'none'}}>
+    <ul style={{ listStyle: 'none' }}>
       <li>Interests: {interests}</li>
       <li>Gender: {gender}</li>
       <li>Height: {height}</li>
