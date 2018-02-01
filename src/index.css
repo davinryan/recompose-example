@@ -1,0 +1,18 @@
+.main {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid grey;
+}
+
+.demoButtons {
+  display: block;
+}
+
+.list {
+  list-style: none;
+}

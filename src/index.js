@@ -8,29 +8,29 @@ import { render } from 'react-dom';
 import WithDefaultProps from './containers/enhancers/WithDefaultProps';
 import LoadingSpinnerExample from './components/LoadingSpinnerExample';
 import ResponsiveExample from './components/ResponsiveExample';
-import WithSmoothScroll from './containers/enhancers/WithSmoothScroll';
-import styles from './index.styles.js';
+import SmoothScrollExample from './components/SmoothScrollExample';
+import './index.css';
 
 const App = () => (
-  <div style={styles.main}>
+  <div className='main'>
     <h1>Recompose Examples</h1>
     <h2>by Davin Ryan</h2>
 
     <Router>
       <div>
-        <ul style={styles.list}>
+        <ul className='list'>
           <li><Link to="/WithDefaultProps">WithDefaultProps</Link></li>
           <li><Link to="/LoadingSpinnerExample">LoadingSpinnerExample</Link></li>
           <li><Link to="/ResponsiveExample">ResponsiveExample</Link></li>
-          <li><Link to="/WithSmoothScroll">WithSmoothScroll</Link></li>
+          <li><Link to="/SmoothScrollExample">SmoothScrollExample</Link></li>
         </ul>
 
-        <hr style={styles.hr} />
+        <hr className='hr' />
 
         <Route path="/WithDefaultProps" component={WithDefaultProps} />
         <Route path="/LoadingSpinnerExample" component={LoadingSpinnerExample} />
         <Route path="/ResponsiveExample" component={ResponsiveExample} />
-        <Route path="/WithSmoothScroll" component={WithSmoothScroll} />
+        <Route path="/SmoothScrollExample" component={SmoothScrollExample} />
       </div>
     </Router>
   </div>
