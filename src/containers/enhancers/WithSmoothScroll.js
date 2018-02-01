@@ -14,9 +14,7 @@ export default (Child) => {
   };
 
   const WithSmoothScroll = compose(
-    withProps((ownerProps: any) => ({
-      scrollToBottom
-    })
+    withProps((ownerProps: any) => ({scrollToBottom})
     ))(Child);
 
   return WithSmoothScroll;
