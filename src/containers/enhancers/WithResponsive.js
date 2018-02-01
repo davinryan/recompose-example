@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { compose, lifecycle, withStateHandlers } from 'recompose';
 
 export default (Child) => {

@@ -1,9 +1,23 @@
 import React from 'react';
+import {compose, withProps} from 'recompose';
+import Scroll from 'react-scroll';
+import {defer} from 'lodash';
 
-const WithSmoothScroll = () => (
-  <div>
-    <h2>WithSmoothScroll</h2>
-  </div>
-);
+const scroll = Scroll.animateScroll;
 
-export default WithSmoothScroll;
+export default (Child) => {
+
+  const basicScrollToBottom = scroll.scrollToBottom.bind(null, { smooth: true, duration: 500 });
+
+  const scrollToBottom = () => {
+    defer(basicScrollToBottom);
+  };
+
+  const WithSmoothScroll = compose(
+    withProps((ownerProps: any) => ({
+      scrollToBottom
+    })
+    ))(Child);
+
+  return WithSmoothScroll;
+};
