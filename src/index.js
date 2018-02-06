@@ -5,7 +5,7 @@ import {
   Link
 } from 'react-router-dom'
 import { render } from 'react-dom';
-import WithDefaultProps from './containers/enhancers/WithDefaultProps';
+import WithDefaultProps from './components/examples/defaultProperties/DefaultProperties';
 import LoadingSpinnerExample from './components/examples/loadingSpinner/LoadingSpinner';
 import ResponsiveExample from './components/examples/responsive/Responsive';
 import SmoothScrollExample from './components/examples/smoothScroll/SmoothScroll';
