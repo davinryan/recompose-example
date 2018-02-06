@@ -2,6 +2,7 @@ import React from 'react';
 import WithSmoothScroll from '../../../containers/enhancers/WithSmoothScroll';
 import WithResponsive from '../../../containers/enhancers/WithResponsive';
 import './ResponsiveSmoothScroll.css';
+import {compose} from 'recompose';
 
 class ResponsiveSmoothScrollExample extends React.Component {
   
@@ -27,4 +28,4 @@ class ResponsiveSmoothScrollExample extends React.Component {
   }
 }
 
-export default WithResponsive(WithSmoothScroll(ResponsiveSmoothScrollExample));
+export default compose(WithResponsive, WithSmoothScroll)(ResponsiveSmoothScrollExample);
