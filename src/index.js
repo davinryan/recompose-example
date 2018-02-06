@@ -5,10 +5,11 @@ import {
   Link
 } from 'react-router-dom'
 import { render } from 'react-dom';
-import WithDefaultProps from './components/examples/defaultProperties/DefaultProperties';
-import LoadingSpinnerExample from './components/examples/loadingSpinner/LoadingSpinner';
+import WithDefaultProps from './components/examples/DefaultProperties';
+import LoadingSpinnerExample from './components/examples/LoadingSpinner';
 import ResponsiveExample from './components/examples/responsive/Responsive';
 import SmoothScrollExample from './components/examples/smoothScroll/SmoothScroll';
+import ResponsiveSmoothScrollExample from './components/examples/responsiveSmoothScroll/ResponsiveSmoothScroll.js';
 import './index.css';
 
 const App = () => (
@@ -23,6 +24,7 @@ const App = () => (
           <li><Link to="/LoadingSpinnerExample">LoadingSpinnerExample</Link></li>
           <li><Link to="/ResponsiveExample">ResponsiveExample</Link></li>
           <li><Link to="/SmoothScrollExample">SmoothScrollExample</Link></li>
+          <li><Link to="/ResponsiveSmoothScrollExample">ResonsiveSmoothScrollExample</Link></li>
         </ul>
 
         <hr className='hr' />
@@ -31,6 +33,7 @@ const App = () => (
         <Route path="/LoadingSpinnerExample" component={LoadingSpinnerExample} />
         <Route path="/ResponsiveExample" component={ResponsiveExample} />
         <Route path="/SmoothScrollExample" component={SmoothScrollExample} />
+        <Route path="/ResponsiveSmoothScrollExample" component={ResponsiveSmoothScrollExample} />
       </div>
     </Router>
   </div>
