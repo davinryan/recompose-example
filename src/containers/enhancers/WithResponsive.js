@@ -3,27 +3,27 @@ import { compose, lifecycle, withStateHandlers } from 'recompose';
 
 export default (Child) => {
 
-  const smallToMediumMQL = window.matchMedia('all and (max-width: 1179px)');
+  const smallMQL = window.matchMedia('all and (max-width: 400px)');
 
+  const withResponsiveModeProps = withStateHandlers(
+    ({ initialValue = smallMQL.matches }) => ({
+      isSmall: initialValue,
+    }),
+    {
+      handleMediaQueryChange: ({ isSmall }) => (mql) => ({
+        isSmall: mql.matches
+      }),
+    });
+    
   const withDynamicResponsiveness = lifecycle({
     componentWillUnmount() {
-      smallToMediumMQL.removeListener(this.props.handleMediaQueryChange);
+      smallMQL.removeListener(this.props.handleMediaQueryChange);
     },
 
     componentWillMount() {
-      smallToMediumMQL.addListener(this.props.handleMediaQueryChange);
+      smallMQL.addListener(this.props.handleMediaQueryChange);
     }
   });
-
-  const withResponsiveModeProps = withStateHandlers(
-    ({ initialValue = smallToMediumMQL.matches }) => ({
-      isSmallToMedium: initialValue,
-    }),
-    {
-      handleMediaQueryChange: ({ isSmallToMedium }) => (mql) => ({
-        isSmallToMedium: mql.matches
-      }),
-    });
 
   const WithResponsive = compose(
     withResponsiveModeProps,

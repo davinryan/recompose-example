@@ -1,10 +1,10 @@
 import React from 'react';
-import WithSmoothScroll from '../containers/enhancers/WithSmoothScroll';
-import './SmoothScrollExample.css';
+import WithSmoothScroll from '../../../containers/enhancers/WithSmoothScroll';
+import './SmoothScroll.css';
 
 const ScrollExample = ({scrollToBottom}) =>
   <div>
-    <h2>ScrollExample</h2>
+    <h2>Smooth Scroll Example</h2>
     <button 
       className='button' 
       onClick={(event) => scrollToBottom()}>Scroll To Bottom</button>

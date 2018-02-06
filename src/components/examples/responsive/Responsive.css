@@ -1,0 +1,22 @@
+.responsiveContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.responsiveBox {
+  height: 200px;
+  width: 200px;
+  border-radius: 5px;
+  transition: 2s;
+}
+
+.smallResponsiveBox {
+  background-color: #0074D9;
+  transform: rotate(0deg);
+}
+
+.largeResponsiveBox {
+  background-color: #FFDC00;
+  transform: rotate(180deg);
+}

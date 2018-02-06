@@ -1,6 +1,6 @@
 import React from 'react';
 import {compose, lifecycle, branch, renderComponent} from 'recompose';
-import WithLoadingSpinner from '../containers/enhancers/WithLoadingSpinner';
+import WithLoadingSpinner from '../../../containers/enhancers/withLoadingSpinner/WithLoadingSpinner';
 
 const fetchData = () => {
   return new Promise((resolve, reject) => {

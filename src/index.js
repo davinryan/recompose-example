@@ -6,9 +6,9 @@ import {
 } from 'react-router-dom'
 import { render } from 'react-dom';
 import WithDefaultProps from './containers/enhancers/WithDefaultProps';
-import LoadingSpinnerExample from './components/LoadingSpinnerExample';
-import ResponsiveExample from './components/ResponsiveExample';
-import SmoothScrollExample from './components/SmoothScrollExample';
+import LoadingSpinnerExample from './components/examples/loadingSpinner/LoadingSpinner';
+import ResponsiveExample from './components/examples/responsive/Responsive';
+import SmoothScrollExample from './components/examples/smoothScroll/SmoothScroll';
 import './index.css';
 
 const App = () => (

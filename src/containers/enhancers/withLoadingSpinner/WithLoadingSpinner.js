@@ -1,5 +1,6 @@
 import React from 'react';
 import { compose, lifecycle, branch, renderComponent } from 'recompose';
+import './WithLoadingSpinner.css';
 
 export default (Child, fetchData) => {
 
@@ -12,9 +13,18 @@ export default (Child, fetchData) => {
   });
 
   const Spinner = () =>
-    <div className="Spinner">
-      <div className="loader">Loading...</div>
-    </div>;
+  <div className='spinnerPage'>
+    <div id='cssloadPgloading'>
+      <div className='cssloadLoadingwrap'>
+        <ul className='cssloadBokeh'>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
   const isLoading = ({ loading }) => loading;
 
