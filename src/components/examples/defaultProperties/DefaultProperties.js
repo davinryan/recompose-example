@@ -1,9 +1,9 @@
 import React from 'react';
 import {withProps, defaultProps} from 'recompose';
 
-const Greeting = ({name}) => <div>Greetings {name}</div>;
+const Greet = ({name}) => <p>Greetings {name}!</p>;
 
-const GreetDeveloper = defaultProps({ name: 'Developer'})(Greeting);
+const GreetDeveloper = defaultProps({ name: 'Anonymous Developer'})(Greet);
 
 const DefaultPropertiesExample = () =>
   <div>
