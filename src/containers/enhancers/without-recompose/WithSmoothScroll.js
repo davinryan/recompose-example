@@ -8,7 +8,6 @@ export default WrappedComponent => {
   const scrollToBottom = () => defer(basicScrollToBottom);
 
   return props => {
-
     const propsWithScrollToBottom = {
       ...props,
       scrollToBottom

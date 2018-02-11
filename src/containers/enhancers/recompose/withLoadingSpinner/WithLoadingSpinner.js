@@ -3,14 +3,6 @@ import { compose, lifecycle, branch, renderComponent } from 'recompose';
 import './WithLoadingSpinner.css';
 
 export default fetchData => WrappedComponent => {
-  const withData = lifecycle({
-    state: { loading: true },
-    componentDidMount() {
-      fetchData().then((data) =>
-        this.setState({ loading: false, ...data }));
-    }
-  });
-
   const Spinner = () =>
   <div className='spinnerPage'>
     <div id='cssloadPgloading'>
@@ -24,6 +16,14 @@ export default fetchData => WrappedComponent => {
       </div>
     </div>
   </div>
+
+  const withData = lifecycle({
+    state: { loading: true },
+    componentDidMount() {
+      fetchData().then((data) =>
+        this.setState({ loading: false, ...data }));
+    }
+  });
 
   const withSpinnerWhileLoading = branch(
     ({ loading }) => loading,
