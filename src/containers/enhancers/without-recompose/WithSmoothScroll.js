@@ -2,15 +2,10 @@ import React from 'react';
 import Scroll from 'react-scroll';
 import { defer } from 'lodash';
 
-const scroll = Scroll.animateScroll;
-
 export default WrappedComponent => {
-
+  const scroll = Scroll.animateScroll;
   const basicScrollToBottom = scroll.scrollToBottom.bind(null, { smooth: true, duration: 500 });
-
-  const scrollToBottom = () => {
-    defer(basicScrollToBottom);
-  };
+  const scrollToBottom = () => defer(basicScrollToBottom);
 
   return props => {
 

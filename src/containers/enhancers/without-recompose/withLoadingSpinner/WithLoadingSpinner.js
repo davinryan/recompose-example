@@ -1,7 +1,8 @@
 import React from 'react';
 import './WithLoadingSpinner.css';
 
-const Spinner = () =>
+export default fetchData => WrappedComponent => {
+  const Spinner = () =>
     <div className='spinnerPage'>
       <div id='cssloadPgloading'>
         <div className='cssloadLoadingwrap'>
@@ -15,9 +16,7 @@ const Spinner = () =>
       </div>
     </div>;
 
-const WithLoadingSpinner = fetchData => WrappedComponent => {
   return class extends React.Component {
-
     constructor(props) {
       super(props);
       this.state = {loading: true};
@@ -40,5 +39,3 @@ const WithLoadingSpinner = fetchData => WrappedComponent => {
     }
   }
 };
-
-export default WithLoadingSpinner;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { compose, lifecycle, withStateHandlers } from 'recompose';
 
-export default (WrappedComponent) => {
+export default WrappedComponent => {
 
   const smallMQL = window.matchMedia('all and (max-width: 400px)');
 
@@ -15,7 +15,7 @@ export default (WrappedComponent) => {
       }),
     });
     
-  const withDynamicResponsiveness = lifecycle({
+  const withMediaQueryHandler = lifecycle({
     componentWillUnmount() {
       smallMQL.removeListener(this.props.handleMediaQueryChange);
     },
@@ -27,6 +27,6 @@ export default (WrappedComponent) => {
 
 return compose(
     withResponsiveModeStateAndHandlers,
-    withDynamicResponsiveness
+    withMediaQueryHandler
 )(WrappedComponent);
 };

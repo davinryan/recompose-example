@@ -1,6 +1,6 @@
 import React from "react";
 
-const WithDefaults = defaultProps => WrappedComponent => {
+export default defaultProps => WrappedComponent => {
   return props => {
     const mergedProps = {
       ...defaultProps,
@@ -9,5 +9,3 @@ const WithDefaults = defaultProps => WrappedComponent => {
     return <WrappedComponent {...mergedProps} />;
   };
 };
-
-export default WithDefaults;

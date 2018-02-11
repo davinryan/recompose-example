@@ -3,7 +3,6 @@ import { compose, lifecycle, branch, renderComponent } from 'recompose';
 import './WithLoadingSpinner.css';
 
 export default fetchData => WrappedComponent => {
-
   const withData = lifecycle({
     state: { loading: true },
     componentDidMount() {
