@@ -1,6 +1,5 @@
 import React from 'react';
-
-const WithDefaults = (WrappedComponent, defaultProps) => {
+const WithDefaults = (defaultProps) => (WrappedComponent) => {
   return (props) => {
     const mergedProps = {
       ...defaultProps,

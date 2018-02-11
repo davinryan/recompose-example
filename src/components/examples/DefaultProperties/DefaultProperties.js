@@ -5,7 +5,7 @@ import './DefaultProperties.css';
 
 const Greet = ({name}) => <p>Greetings {name}!</p>;
 
-const GreetDeveloper = WithDefaults(Greet, { name: 'Anonymous Developer'});
+const GreetDeveloper = WithDefaults({ name: 'Anonymous Developer'})(Greet);
 const GreetDeveloperRecompose = defaultProps({ name: 'Anonymous Developer'})(Greet);
 
 const DefaultPropertiesExample = () =>
