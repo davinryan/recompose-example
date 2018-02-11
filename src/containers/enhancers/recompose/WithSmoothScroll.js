@@ -13,9 +13,7 @@ export default (Child) => {
     defer(basicScrollToBottom);
   };
 
-  const WithSmoothScroll = compose(
+  return compose(
     withProps((ownerProps: any) => ({scrollToBottom})
     ))(Child);
-
-  return WithSmoothScroll;
 };

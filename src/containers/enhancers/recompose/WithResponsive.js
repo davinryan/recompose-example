@@ -5,7 +5,7 @@ export default (Child) => {
 
   const smallMQL = window.matchMedia('all and (max-width: 400px)');
 
-  const withResponsiveModeProps = withStateHandlers(
+  const withResponsiveModeStateAndHandlers = withStateHandlers(
     ({ initialValue = smallMQL.matches }) => ({
       isSmall: initialValue,
     }),
@@ -25,9 +25,8 @@ export default (Child) => {
     }
   });
 
-  const WithResponsive = compose(
-    withResponsiveModeProps,
+return compose(
+    withResponsiveModeStateAndHandlers,
     withDynamicResponsiveness
   )(Child);
-  return WithResponsive;
 };
