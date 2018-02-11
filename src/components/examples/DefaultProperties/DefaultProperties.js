@@ -10,17 +10,16 @@ const GreetDeveloperRecompose = defaultProps({ name: 'Anonymous Developer'})(Gre
 
 const DefaultPropertiesExample = () =>
   <div>
-    
-    <h2>Without Recompose</h2>
+    <h2>Default Properties Example</h2>
+
+    <h3>Without Recompose</h3>
     <div className='defaultProperties-exampleBox'>
-      <h3>Default Properties Example</h3>
       <GreetDeveloper />
       <GreetDeveloper name='Davin' />
     </div>
 
-    <h2>With Recompose</h2>
+    <h3>With Recompose</h3>
     <div className='defaultProperties-exampleBox'>
-      <h3>Default Properties Example</h3>
       <GreetDeveloperRecompose />
       <GreetDeveloperRecompose name='Davin'/>
     </div>

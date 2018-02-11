@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { render } from "react-dom";
 import WithDefaultProps from "./components/examples/DefaultProperties/DefaultProperties";
-import LoadingSpinnerExample from "./components/examples/LoadingSpinner";
+import LoadingSpinnerExample from "./components/examples/LoadingSpinner/LoadingSpinner";
 import ResponsiveExample from "./components/examples/responsive/Responsive";
 import SmoothScrollExample from "./components/examples/smoothScroll/SmoothScroll";
 import ResponsiveSmoothScrollExample from "./components/examples/responsiveSmoothScroll/ResponsiveSmoothScroll.js";

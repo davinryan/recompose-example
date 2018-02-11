@@ -2,9 +2,9 @@ import React from 'react';
 import { compose, lifecycle, branch, renderComponent } from 'recompose';
 import './WithLoadingSpinner.css';
 
-export default (Child, fetchData) => {
+export default fetchData => Child => {
 
-  const withUserData = lifecycle({
+  const withData = lifecycle({
     state: { loading: true },
     componentDidMount() {
       fetchData().then((data) =>
@@ -26,15 +26,13 @@ export default (Child, fetchData) => {
     </div>
   </div>
 
-  const isLoading = ({ loading }) => loading;
-
   const withSpinnerWhileLoading = branch(
-    isLoading,
+    ({ loading }) => loading,
     renderComponent(Spinner)
   );
 
   return compose(
-    withUserData,
+    withData,
     withSpinnerWhileLoading
   )(Child);
 }
