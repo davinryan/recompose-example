@@ -1,5 +1,5 @@
 import React from 'react';
-import WithSmoothScroll from '../../../containers/recompose/enhancers/WithSmoothScroll';
+import WithSmoothScroll from '../../../containers/enhancers/recompose/WithSmoothScroll';
 import './SmoothScroll.css';
 
 const ScrollExample = ({ scrollToBottom }) =>

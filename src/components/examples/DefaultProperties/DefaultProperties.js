@@ -1,6 +1,6 @@
 import React from 'react';
 import {withProps, defaultProps} from 'recompose';
-import WithDefaults from '../../../containers/without-recompose/enhancers/WithDefaults';
+import WithDefaults from '../../../containers/enhancers/without-recompose/WithDefaults';
 import './DefaultProperties.css';
 
 const Greet = ({name}) => <p>Greetings {name}!</p>;
