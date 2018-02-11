@@ -1,5 +1,5 @@
 import React from 'react';
-import WithResponsive from '../../../containers/enhancers/WithResponsive';
+import WithResponsive from '../../../containers/recompose/enhancers/WithResponsive';
 import classNames from 'classnames';
 import './Responsive.css';
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import WithSmoothScroll from '../../../containers/enhancers/WithSmoothScroll';
-import WithResponsive from '../../../containers/enhancers/WithResponsive';
+import WithSmoothScroll from '../../../containers/recompose/enhancers/WithSmoothScroll';
+import WithResponsive from '../../../containers/recompose/enhancers/WithResponsive';
 import './ResponsiveSmoothScroll.css';
 import {compose} from 'recompose';
 
