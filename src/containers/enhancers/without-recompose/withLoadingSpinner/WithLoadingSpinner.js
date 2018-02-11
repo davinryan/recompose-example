@@ -13,7 +13,7 @@ const Spinner = () =>
           </ul>
         </div>
       </div>
-    </div>  
+    </div>;
 
 const WithLoadingSpinner = fetchData => WrappedComponent => {
   return class extends React.Component {

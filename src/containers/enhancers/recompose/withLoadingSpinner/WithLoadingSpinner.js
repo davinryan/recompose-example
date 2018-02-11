@@ -2,7 +2,7 @@ import React from 'react';
 import { compose, lifecycle, branch, renderComponent } from 'recompose';
 import './WithLoadingSpinner.css';
 
-export default fetchData => Child => {
+export default fetchData => WrappedComponent => {
 
   const withData = lifecycle({
     state: { loading: true },
@@ -34,5 +34,5 @@ export default fetchData => Child => {
   return compose(
     withData,
     withSpinnerWhileLoading
-  )(Child);
+  )(WrappedComponent);
 }

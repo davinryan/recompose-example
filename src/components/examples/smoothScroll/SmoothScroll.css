@@ -1,4 +1,9 @@
-.button {
+.smoothScroll-exampleBox {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.smoothScroll-button {
   min-height: 40px;
   min-width: 200px;
   font-size: 20px;

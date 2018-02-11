@@ -1,7 +1,7 @@
 import React from 'react';
 import { compose, lifecycle, withStateHandlers } from 'recompose';
 
-export default (Child) => {
+export default (WrappedComponent) => {
 
   const smallMQL = window.matchMedia('all and (max-width: 400px)');
 
@@ -28,5 +28,5 @@ export default (Child) => {
 return compose(
     withResponsiveModeStateAndHandlers,
     withDynamicResponsiveness
-  )(Child);
+)(WrappedComponent);
 };
