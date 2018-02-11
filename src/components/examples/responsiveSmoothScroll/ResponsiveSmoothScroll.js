@@ -5,7 +5,6 @@ import './ResponsiveSmoothScroll.css';
 import {compose} from 'recompose';
 
 class ResponsiveSmoothScrollExample extends React.Component {
-  
   constructor(props) {
     super(props);
   }
