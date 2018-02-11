@@ -3,8 +3,14 @@
   "description": null,
   "version": "0.0.1",
   "dependencies": {
+    "classnames": "2.2.5",
+    "lodash": "4.17.5",
+    "ramda": "latest",
+    "react": "16.0.0",
     "react-dom": "16.0.0",
-    "react": "16.0.0"
+    "react-router-dom": "latest",
+    "react-scroll": "1.7.6",
+    "recompose": "0.26.0"
   },
   "devDependencies": {
     "react-scripts": "1.0.0"
