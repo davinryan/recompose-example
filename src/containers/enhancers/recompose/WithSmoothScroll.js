@@ -9,6 +9,6 @@ export default WrappedComponent => {
   const scrollToBottom = () => defer(basicScrollToBottom);
 
   return compose(
-    withProps((ownerProps) => ({scrollToBottom})
-    ))(WrappedComponent);
+      withProps((ownerProps) => ({scrollToBottom}))
+    )(WrappedComponent);
 };

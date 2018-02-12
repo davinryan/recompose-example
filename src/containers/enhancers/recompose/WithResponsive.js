@@ -2,7 +2,6 @@ import React from 'react';
 import { compose, lifecycle, withStateHandlers } from 'recompose';
 
 export default WrappedComponent => {
-
   const smallMQL = window.matchMedia('all and (max-width: 400px)');
 
   const withResponsiveModeStateAndHandlers = withStateHandlers(
@@ -28,5 +27,5 @@ export default WrappedComponent => {
 return compose(
     withResponsiveModeStateAndHandlers,
     withMediaQueryHandler
-)(WrappedComponent);
+  )(WrappedComponent);
 };
