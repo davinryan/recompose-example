@@ -3,7 +3,7 @@ import './WithLoadingSpinner.css';
 
 export default fetchData => WrappedComponent => {
   const Spinner = () =>
-    <div className='spinnerPage'>
+    <div className='spinner'>
       <div id='cssloadPgloading'>
         <div className='cssloadLoadingwrap'>
           <ul className='cssloadBokeh'>

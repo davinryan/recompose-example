@@ -2,14 +2,14 @@ import React from "react";
 import { compose, lifecycle, branch, renderComponent } from "recompose";
 import WithLoadingSpinnerRecompose from "../../../containers/enhancers/recompose/withLoadingSpinner/WithLoadingSpinner";
 import WithLoadingSpinner from "../../../containers/enhancers/without-recompose/withLoadingSpinner/WithLoadingSpinner";
-import './LoadingSpinner.css';
+import "./LoadingSpinner.css";
 
 const fetchData = () => {
   return new Promise((resolve, reject) => {
     setTimeout(
       () =>
         resolve({
-          name: "Davin",
+          name: "Davin Ryan",
           interests: "Javascript, React and Recompose",
           gender: "male",
           height: "183cm"
@@ -32,19 +32,21 @@ const MyDetails = ({ name, interests, gender, height }) => (
 
 const LoadingSpinnerExample = () => {
   const MyDetailsWithoutRecompose = WithLoadingSpinner(fetchData)(MyDetails);
-  const MyDetailsWithRecompose = WithLoadingSpinnerRecompose(fetchData)(MyDetails);
+  const MyDetailsWithRecompose = WithLoadingSpinnerRecompose(fetchData)(
+    MyDetails
+  );
 
   return (
     <div>
       <h2>Loading Spinner Example</h2>
 
       <h3>Without Recompose</h3>
-      <div className='loadingSpinner-exampleBox'>
+      <div className="loadingSpinner-exampleBox">
         <MyDetailsWithoutRecompose />
       </div>
 
       <h3>With Recompose</h3>
-      <div className='loadingSpinner-exampleBox'>
+      <div className="loadingSpinner-exampleBox">
         <MyDetailsWithRecompose />
       </div>
     </div>
