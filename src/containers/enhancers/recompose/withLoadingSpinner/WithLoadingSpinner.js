@@ -34,6 +34,6 @@ export default fetchData => WrappedComponent => {
   //   withData,
   //   withSpinnerWhileLoading
   // )(WrappedComponent);
-  // same as withData(WithSpinnerWhileLoading(WrappedCompoentn));
+  // same as return withData(withSpinnerWhileLoading(WrappedComponent));
   return WrappedComponent;
 }
